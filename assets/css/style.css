@@ -1,0 +1,121 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: lightgrey;
+    color: rgb(67, 67, 114);
+}
+h1{
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+}
+p{
+    border-color: black;
+    border-style: dashed;
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.content{
+    padding: .5rem;
+    height: 100vh;
+    width: 80vw;
+}
+
+@media screen and (min-width: 992px){
+    .content{
+        max-width: 992px;
+        height: auto;
+        margin: 0 auto;
+    }   
+}
+
+.characters{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+@media screen and (min-width: 576px){
+    .characters{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 992px){
+    .characters{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.character{
+    display: flex;
+    flex-direction: column;
+    margin: .5rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    color: white;
+}
+.character .details img{
+    max-width: 100%;
+    height: 60px;
+    display: flex;
+    align-self: flex-end;
+}
+.character .number{
+    color: black;
+    text-align: right;
+    font-size: 1rem;
+}
+.character .name{
+    color: #fff;
+    margin: .25rem 0;
+}
+.character .details{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+.character .details .types .lines{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+.character .details .types{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    text-align: center;
+}
+.character .details .types .type{
+    background-color: #2f4e48;
+    color: #fff;
+    padding: .25rem .5rem;
+    font-size: .825rem;
+    margin: .125rem;
+    border-radius: 1rem;
+    text-align: center;
+}
+.Human { background-color: #83855d }
+.Alien { background-color: #77c850 }
+.Dead { background-color: #336e70 }
+.Humanoid{ background-color: #253680;}
+.Alive { background-color: rgb(228, 128, 47);}
+.Animal { background-color: #b33092;}
+.pagination{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+#loadmore{
+    padding: .5rem .75rem;
+    background-color: #5761ac;
+    color: #fff;
+    border-radius: 1rem;
+    border: none;
+}
